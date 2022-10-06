@@ -1,0 +1,16 @@
+---
+to: src/stories/<%= name %>/<%= name %>.jsx
+---
+import React from 'react';
+
+const <%= name %> = (props) => {
+return (
+<div className={['bg-red-200']}>
+  <%= name %> - {props.label} {props.active ? 'true' : 'false'}
+  {props.children}
+  {props.size}
+</div>
+)
+}
+
+export default <%= name %>

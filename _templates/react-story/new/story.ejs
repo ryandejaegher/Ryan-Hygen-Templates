@@ -1,0 +1,27 @@
+---
+to: src/stories/<%= name %>/<%= name %>.stories.jsx
+---
+import React from 'react';
+import <%= name %>Component from './<%= name %>';
+
+export default {
+title: '<%= name %>',
+component: <%= name %>Component,
+
+args: {
+label: "Hello",
+active: true,
+size: 'sm'
+},
+
+argTypes: {
+label: {control:'text'},
+active: {control:'boolean'},
+size: {control:'radio', options:['sm','md','lg']}
+}
+}
+
+const Template = (args) =>
+<<%= name %>Component {...args} />
+
+export const <%= name %> = Template.bind({});
