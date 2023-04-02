@@ -1,16 +1,16 @@
 ---
-to: src/stories/<%= name %>/<%= name %>.jsx
+to: components/<%= h.changeCase.lower(name) %>/<%= Name %>.jsx
 ---
 import React from 'react';
 
-const <%= name %> = (props) => {
+const <%= Name %> = (props) => {
 return (
 <div className={['bg-red-200']}>
-  <%= name %> - {props.label} {props.active ? 'true' : 'false'}
+  <%= Name %> - {props.label} {props.active ? 'true' : 'false'}
   {props.children}
   {props.size}
 </div>
 )
 }
 
-export default <%= name %>
+export default <%= Name %>

@@ -1,12 +1,13 @@
 ---
-to: src/stories/<%= name %>/<%= name %>.stories.jsx
+to: components/<%= h.changeCase.lower(name) %>/<%= Name %>.stories.jsx
 ---
+
 import React from 'react';
-import <%= name %>Component from './<%= name %>';
+import <%= Name %> from './<%= Name %>';
 
 export default {
-title: '<%= name %>',
-component: <%= name %>Component,
+title: '<%= Name %>',
+component: <%= Name %>,
 
 args: {
 label: "Hello",
@@ -14,14 +15,11 @@ active: true,
 size: 'sm'
 },
 
-argTypes: {
-label: {control:'text'},
-active: {control:'boolean'},
-size: {control:'radio', options:['sm','md','lg']}
-}
-}
 
-const Template = (args) =>
-<<%= name %>Component {...args} />
-
-export const <%= name %> = Template.bind({});
+export const <%= Name %> = {
+args: {
+label: "Hello",
+active: true,
+size: 'sm'
+},
+}
