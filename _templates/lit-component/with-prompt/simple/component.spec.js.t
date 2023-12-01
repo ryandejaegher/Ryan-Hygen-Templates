@@ -1,5 +1,7 @@
+<% JSClass = h.changeCase.pascal(componentTag) %>
+
 ---
-to: src/components/<%= h.changeCase.pascal(componentTag) %>/<%= h.changeCase.pascal(componentTag) %>.spec.js
+to: src/components/<%= JSClass %>/<%= JSClass %>.spec.js
 ---
 
 // @ts-check

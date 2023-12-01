@@ -1,7 +1,11 @@
+<% JSClass = h.changeCase.pascal(componentTag) %>
+
 ---
-to: src/components/<%= h.changeCase.pascal(componentTag) %>/<%= h.changeCase.pascal(componentTag) %>.js
+to: src/components/<%= JSClass %>/<%= JSClass %>.js
 ---
 import { LitElement, css, html, unsafeCSS } from 'lit';
+
+
 
 /**
  * An example element.
@@ -10,7 +14,7 @@ import { LitElement, css, html, unsafeCSS } from 'lit';
  * @csspart button - The button
  */
 
-export class <%= h.changeCase.pascal(componentTag) %> extends LitElement {
+export class <%= JSClass %> extends LitElement {
   // ADD PROPERTIES HERE
   static properties = {
     name: { type: String },
@@ -57,4 +61,4 @@ export class <%= h.changeCase.pascal(componentTag) %> extends LitElement {
 }
 
 // Register the element with the browser
-window.customElements.define('<%= componentTag %>', <%= h.changeCase.pascal(componentTag) %>);
+window.customElements.define('<%= componentTag %>', <%= JSClass %>);
